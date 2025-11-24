@@ -1,0 +1,67 @@
+%type de document
+\documentclass[12pt,a4paper]{report}
+
+%====================================préambule
+%les packages 
+%1. traitement des caractères spéciaux
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+%2. 
+ \usepackage[french]{minitoc} 
+%\etocsetnexttocdepth{subsection} %list subsections
+\usepackage[top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}% geometry package des marges des pages, 
+\usepackage[pdftex]{graphicx} %package des images, option pdftex spécifier que le document sera compilé avec pdfLaTeX
+\usepackage[colorlinks=false]{hyperref} %for creating links in the pdf version and other additional pdf attributes, no effect on the printed document
+\usepackage[final]{pdfpages} %est utilisée pour inclure des pages PDF externes dans votre document LaTeX.final les documents ne sont pas cliquable
+\usepackage{float} %pour bien positionner les figures
+\usepackage{pslatex} % for times new roman,
+
+\usepackage{array} %  pour créer et personnaliser des tableaux dans votre document
+\usepackage{setspace} %pour controler l'espace entre les lignes \onehalfspacing \singlespacing \doublespacing
+\usepackage{enumerate}%listes à numéros
+\usepackage{longtable}%tableaux sur plusieurs pages
+\usepackage{multirow}
+\usepackage{enumitem}%pour des items star fleche etc
+\usepackage[french]{babel}
+\usepackage[font=small,labelfont=bf]{caption}%les caption seront en taille small et gras(figure1, table1)
+\onehalfspacing 
+
+% Définir la longueur de l'espacement entre les paragraphes
+\setlength{\parskip}{10pt} % Réglez la valeur selon vos préférences
+
+%pour choisir un style pour les chapitres
+%https://latex-tutorial.com/fancy-chapters-latex/
+\usepackage[Glenn]{fncychap}
+%\usepackage[Conny]{fncychap}
+%\usepackage[Bjarne]{fncychap}
+
+% ======Configuration des en-têtes et des pieds de page
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+
+%\fancyhead[R]{\rightmark} %pour les sections en haut de l'ntête
+\fancyhead[LE,RO]{\nouppercase{\leftmark}}  % Chapter name in the outer side of even and odd pages
+%lorsque vous utilisez \leftmark dans l'en-tête, LaTeX récupère automatiquement le nom du chapitre en cours. De même, lorsque vous utilisez \rightmark, LaTeX récupère le nom de la section en cours. 
+\fancyfoot[LE,RO]{\thepage} % Page number in the outer side of even and odd pages
+\fancyfoot[L]{Nom de votre projet}
+\renewcommand{\headrulewidth}{0.4pt} % Thickness of the header rule line
+\renewcommand{\footrulewidth}{0.4pt} % No footer rule line
+%=============document principal ========
+\begin{document}
+\cleardoublepage % Pour commencer une nouvelle page  si nécessaire
+%\includepdf{pagedegarde.pdf}
+%\input{projet/remerciement.tex}
+\pagenumbering{roman} % Numérotation des pages en chiffres romains
+\dominitoc
+\tableofcontents
+ \listoffigures% liste figures
+  \listoftables%liste de tableaux
+  \mtcaddchapter 
+  %La commande \mtcaddchapter est utilisée avec le package minitoc pour  créer un mini sommaire pour chaque chapitre, affichant les sections et sous-sections qu'il contient.
+ \clearpage
+ \pagenumbering{arabic}
+\input{projet/introduction}
+
+\input{projet/chapitre1}
+\end{document}

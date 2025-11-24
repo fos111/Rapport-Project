@@ -1,0 +1,160 @@
+\chapter{Présentation du cadre du projet} 
+ \minitoc
+ \newpage
+ 
+\section{Introduction}
+Ce premier chapitre comportera plusieurs parties dont on peut citer l’organisme d’accueil, la 
+problématique du projet, la solution proposée ainsi que notre méthodologie adoptée pour le développement de ce projet.
+
+\section{Présentation de l'organisme d'accueil}
+ECOPORTE est une société tunisienne spécialisée dans la production et la distribution de produits pour les hôtels, les spas et les thalassos. Fondée en 2019, elle est rapidement devenue un leader sur le marché tunisien grâce à sa gamme complète de produits de haute qualité.
+
+La société se concentre sur la production d'articles tels que les chaussons, les tongs, le linge de lit, les shampooings, les gels douche, les laits corporels, les savons et d'autres produits écologiques à base de bambou et de coton régénéré. Cette gamme de produits offre une expérience de haute qualité pour les clients des hôtels, spas et thalassos tout en respectant l'environnement. \footnote[1]{text} 
+
+ECOPORTE  a réussi à gagner la confiance de plus de 50 hôtels répartis sur 9 gouvernorats en seulement 4 ans d'existence. Cela témoigne de la qualité de nos produits et de notre capacité à répondre aux besoins des clients de manière efficace et professionnelle. L'organigramme de l'ECOPORTE est représenté dans la figure 1.1:
+\begin{figure}[H]
+  \centering
+    \includegraphics[scale=0.9]{projet/images/organigramme}
+  \caption{Organigramme de la société ECOPORTE}
+\end{figure}
+
+\section{Contexte du projet}
+Dans cette partie, nous décrivons l'étude de l'existant, les limites ainsi que la solution proposée.
+\subsection{Etude de l'existant}
+ECOPORTE est une société qui a plusieurs transactions en amont et en aval, les données de chaque article (état de stock, référence article, matière première utilisé, coût de revient…)  les fournisseurs (type de matière première, délais de livraison, modalité de paiement, Nom de fournisseur, emplacement…), les clients (nom du client, bon de commande, facturation, modalité de paiement, prix de vente, articles vendus, emplacement du client, délais de livraison, temps de production, …) et la partie production (nom du tailleur, nombre de tailleurs, quantité produites par jour, quantités emballés par jour, nombre d’heures travaillé, nombre d’heures supplémentaires travaillé, pointage, …). 
+
+\subsection{Critique de l'existant et problématique}
+Nous citons ci-dessous quelques problèmes liés au système existant :
+%===========utiliser une liste à puces simple 
+\begin{itemize}
+    \item Les données de l’entreprise sont stockées dans plusieurs sources (désordonnées) ce qui rend l’exploitation de ces informations difficiles.
+\item Un système désordonné rend la gestion de la charge de travail plus lente et donc une performance ralentie.
+\item	Suivie et contrôle des opérations devient difficile : Perte de visibilité
+\item	Système saturé : les données peuvent être perdues et/ou des erreurs imprévus peuvent survenir.
+\item Processus manuel d'extraction et de visualisation de données 
+
+\end{itemize}
+%===========utiliser une à puces 2
+\begin{itemize}[label=$\star$]
+  \item Premier élément
+  \item Deuxième élément
+  \item Troisième élément
+\end{itemize}
+
+\begin{itemize}[label=\textbullet]
+  \item Premier élément
+  \item Deuxième élément
+  \item Troisième élément
+\end{itemize}
+
+\begin{itemize}[label=$\rightarrow$]
+  \item Premier élément
+  \item Deuxième élément
+  \item Troisième élément
+\end{itemize}
+%===========utiliser une liste numérotée 
+\begin{enumerate}
+    \item Les données de l’entreprise sont stockées dans plusieurs sources (désordonnées) ce qui rend l’exploitation de ces informations difficiles.
+\item Un système désordonné rend la gestion de la charge de travail plus lente et donc une performance ralentie.
+\item
+\end{enumerate}
+En résumé, une masse importante de données est gérée chaque jour par notre équipe pour le bon fonctionnement de la société. Ceci rend, le processus de prise de décision difficile à analyser et à organiser avec les systèmes de gestion actuels ou plutôt classiques. Ainsi, les problèmes cités sont la cause d’une mauvaise gestion des différentes activités de l’entreprise, une perte du temps, erreurs, ainsi qu'une manque de suivi du processus de production et dificulté de prise de décision à cause de la saturation et/ou désordre du système. 
+\subsection{Solution proposée}
+Dans le cadre de ce projet de fin d'études, notre objectif est de mettre en place une solution de Business Intelligence (BI) qui permettra la création d'un entrepôt de données centralisé, facilitant ainsi la génération rapide de rapports. Cette solution nous permettra de consacrer davantage de temps à la prise de décisions éclairées pour un meilleur suivi de l'activité de l'entreprise.
+
+Grâce à cette solution, nous pourrons créer un emplacement central où toutes les données seront intégrées et organisées. Cela nous permettra de réaliser des analyses et de suivre les indicateurs de performance clés (KPI) sans rencontrer de difficultés majeures. 
+
+Pour atteindre cet objectif, nous commencons par la collecte des données, puis leur intégration et leur analyse à l'aide de l'outil "TALEND Data Integration Studio". Enfin, nous utiliserons Power BI pour créer des tableaux de bord interactifs et visuels en vue de fournir à l'entreprise une solution BI complète qui permettra une gestion efficace des données, une analyse approfondie et une visualisation claire des informations pertinentes pour une meilleure prise de décision.
+
+
+\section{Méthodologie de travail }
+Le choix de l’approche de développement constitue une étape décisive pour l’élaboration de l’application, celle-ci permet d’augmenter grandement la productivité, d’estimer le temps de développement et de la rendre plus fidèle aux besoins du client. En outre, un mauvais choix du processus de développement peut conduire un projet à l’échec. Les méthodes agiles prennent en compte tous les aspects d'un projet informatique et de son cycle de vie. 
+ \subsection{Etude comparative}
+Une approche agile est menée dans un esprit collaboratif et s'adapte aux approches incrémentales. Elle engendre des produits de haute qualité tout en tenant compte de l'évolution des besoins du client. Une approche agile assure une meilleure communication avec le client et une meilleure visibilité du produit livrable. Elle permet aussi de gérer la qualité en continu et de détecter des problèmes le plus tôt possible au fur et à mesure, permettant, ainsi, d'entreprendre des actions correctrices sans trop de pénalités dans les coûts et les délais.  Il existe plusieurs méthodes agiles Scrum, Xp, Kanban, etc \cite{ref1}. On représente dans le tableau , une étude comparative entre l'approche SCRUM et Kanban [2]:
+%======table 1 ============
+\begin{table}[h] % h indique que la table doit être placée "ici" dans le document
+\centering
+\caption{Légende de votre tableau}
+\begin{tabular}{|c|c|}
+\hline
+Colonne 1 & Colonne 2 \\
+\hline
+Valeur 1 & Valeur 2 \\
+Valeur 3 & Valeur 4 \\
+\hline
+\end{tabular}
+
+\end{table}
+%======table 2 ============
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+\multirow{2}{*}{\textbf{Nom}} & \textbf{Âge} & \multirow{2}{*}{\textbf{Ville}} \\ 
+\cline{2-2}
+& \textbf{Année} & \\ \hline
+John         & 30            & New York       \\ \hline
+Mary         & 25            & Los Angeles    \\ \hline
+\end{tabular}
+\caption{Exemple de tableau avec fusion de la première ligne}
+\end{table}
+
+%======table 3 ============
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+\multicolumn{3}{|c|}{\textbf{Titre fusionné sur trois colonnes}} \\ \hline
+Colonne 1 & Colonne 2 & Colonne 3 \\ \hline
+Donnée 1 & Donnée 2 & Donnée 3 \\ \hline
+\end{tabular}
+\caption{Exemple de fusion des colonnes dans la première ligne}
+\label{tab:fusion-colonne-premiere-ligne}
+\end{table}
+%======table 4 ============
+
+\begin{longtable}{ | p{3.5cm} | p{5cm} | p{5cm} |}
+\caption{Comparaison entre SCRUM et Kanban}\\
+      \hline
+      \textbf{Caractéristiques} & \textbf{Scrum} & \textbf{Kanban}  \\
+      \hline
+    Structure du processus & Scrum a une structure de processus plus rigide avec des rôles définis (Product Owner, Scrum Master, Équipe de développement) et des itérations de temps fixes appelées "sprints". & Kanban, offre une structure plus souple sans itérations fixes, se concentrant plutôt sur le flux continu de travail.\\
+    Planification et prédictibilité & Scrum se concentre sur la planification à court terme avec des sprints de durée fixe et un engagement de livraison de fonctionnalités à la fin de chaque sprint. & Kanban met l'accent sur la visualisation du flux de travail actuel, ce qui rend la prédictibilité à long terme moins prononcée\\
+      \hline
+      Gestion des priorités & Scrum utilise un backlog de produits et un backlog de sprint pour prioriser les éléments de travail et décider de ce qui doit être réalisé lors de chaque sprint. & Kanban utilise des limites de travaux en cours pour gérer les priorités et éviter la surcharge de travail.\\
+       \hline
+      Cadences et cérémonies & Scrum a des cérémonies spécifiques, telles que les réunions de planification du sprint, les revues de sprint et les rétrospectives, qui ont lieu à des moments prédéfinis. & Kanban n'impose pas de cadences spécifiques, bien qu'il puisse inclure des réunions régulières pour discuter de l'état du flux de travail.\\
+      \hline
+\end{longtable}
+
+\subsection{Choix de l’approche}
+Après avoir étudié quelques approches agiles, pour réaliser notre projet, nous avons choisi d’utiliser le cadre de travail SCRUM vu sa structure qui nous permet de faire des réunions quotidiennes, ce qui renforce la communication entre les membres de l’équipe projet et ceci contribue à créer une atmosphère chaleureuse de travail et développer l’esprit de groupe ce qui augmente son rendement et par conséquent accélère l’avancement du travail et améliore la productivité \cite{ref2}. En plus, SCRUM nous permet de mieux respecter les dates planifiées pour clôturer les différentes parties du projet et de ne pas les dépasser. 
+\subsection{L’approche SCRUM pour le développement du projet}
+Le principe SCRUM est de concentrer l’équipe de développement sur un ensemble de fonctionnalités à réaliser de façon itérative, dans des itérations d’une durée de deux à quatre semaines, appelées des Sprints. Chaque Sprint doit aboutir à la livraison d’un produit partiel. La figure ci-dessous illustre les étapes à suivre dans le cycle de vie du SCRUM [3] :
+\begin{figure}[H]
+  \centering
+    \includegraphics[scale=0.9]{projet/images/scrum}
+  \caption{ Cycle de vie SCRUM}
+\end{figure}
+L’approche SCRUM comporte trois acteurs : 
+\begin{itemize}
+ \item{\textbf{Scrum Master} }
+Un Scrum Master est une personne chargée de s'assurer qu'une équipe Scrum fonctionne aussi efficacement que possible dans le respect des valeurs de l'approche Scrum. Il élimine et supprime les obstacles à la progression de l'équipe afin que tous les membres puissent se concentrer sur le travail à réaliser. 
+\item{\textbf{Product Owner }}
+Orienté métier ; un Product Owner s'assure que l'équipe Scrum est alignée sur les objectifs du produit global auquel tous les membres contribuent. La bonne exécution du projet fait partie de la responsabilité du Product Owner, il s'assure que l'équipe se concentre sur la satisfaction des besoins du produit par la communication et l'évaluation des progrès. 
+\item{\textbf{L’équipe de développement} }
+L'équipe agit collectivement pour déterminer comment atteindre ses objectifs. Les fonctionnalités spécifiques sur lesquelles les membres de l’équipe travaillent sont déterminées par la priorité établie par le Product Owner.  
+\end{itemize}
+
+ 
+\section{Conclusion}
+
+Ce chapitre constitue une étape primordiale pour fixer les repères de notre projet durant lequel nous avons présenté l’organisme d’accueil et dégagé des attentes du projet après avoir étudié et critiqué l’existant. À la fin, nous avons présenté la méthodologie de travail à utiliser.
+ 
+
+
+
+
+
+
+
